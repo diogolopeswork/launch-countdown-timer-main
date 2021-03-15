@@ -114,7 +114,7 @@ main .main-body .countdown-container .countdown-el .big-text::before {
     content: '';
     position: absolute;
     background-color: rgba(0, 0, 0, 0.2);
-    top: 35.4%;
+    top: 37.1%;
     width: 200px;
     height: 100px;
     border-top-right-radius: 10px;
