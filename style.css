@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+:root {
+    /* Fonts */
+    --font: 'Red Hat Text', sans-serif;
+
+    /* Primary Color */
+    --Grayishblue: hsl(237, 18%, 59%);
+    --Softred: hsl(345, 95%, 68%);
+
+    /* Neutral color */
+    --White: hsl(0, 0%, 100%);
+    --Darkdesaturatedblue: hsl(236, 21%, 26%);
+    --Verydarkblue: hsl(235, 16%, 14%);
+    --Verydarkblackblue: hsl(234, 17%, 12%);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--White);
+}
+
+.attribution { 
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    font-size: 11px;
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+main {
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+main #stars {
+    background-color: transparent;
+    position: absolute;
+    z-index: 0;
+}
+
+main .main-header {
+    background-color: var(--Verydarkblackblue);
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-body {
+    background-color: var(--Verydarkblue);
+    width: 100%;
+    height: 60%;
+}
+
+main .main-body .countdown-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    height: 100%;
+}
+
+main .main-body .countdown-container .countdown-el .big-text {
+    width: 200px;
+    height: 200px;
+    background-color: var(--Darkdesaturatedblue);
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--Softred);
+    margin: 0 0 10px 0;
+    border-radius: 10px;
+}
+
+main .main-body .countdown-container .countdown-el span {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: var(--Grayishblue);
+}
+
+footer {
+    width: 100%;
+    height: 40%;
+    background-color: var(--Verydarkblue);
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+footer #hills {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+}
+
+footer .social {
+    z-index: 1;
+    position: relative;
+    width: 10%;
+    height: 40%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer .social .fab {
+    text-align: center;
+    font-size: 30px;
+}
+
+footer .social .fab:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--Softred);
+}
+
+@media screen and (max-width: 500px) {
+    html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .main-body .countdown-container {
+        width: 100%;
+    }
+
+    main .main-body .countdown-container .countdown-el .big-text {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 10px auto;
+        font-size: 60px;
+    }
+
+    footer #hills {
+        height: 20%;
+    }
+
+    footer .social  {
+        width: 150px;
+        margin: 0 auto 85px auto;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .main-body .countdown-container {
+        width: 100%;
+    }
+
+    main .main-body .countdown-container .countdown-el {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    main .main-body .countdown-container .countdown-el .big-text {
+        display: flex;
+        justify-content: space-evenly;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 10px auto;
+        font-size: 40px;
+    }
+
+    main .main-body .countdown-container .countdown-el span {
+        font-size: 15px;
+    }
+
+    footer .social  {
+        width: 150px;
+        margin: 0 auto 75px auto;
+    }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1000px) {
+    html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .main-body .countdown-container {
+        width: 100%;
+    }
+
+    main .main-body .countdown-container .countdown-el {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    footer #hills {
+        height: 20%;
+    }
+
+    footer .social  {
+        width: 150px;
+        margin: 0 auto 85px auto;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .main-body .countdown-container {
+        width: 100%;
+    }
+
+    main .main-body .countdown-container .countdown-el {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    footer #hills {
+        height: 20%;
+    }
+
+    footer .social  {
+        width: 150px;
+        margin: 0 auto 85px auto;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1399px) {
+    html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .main-body .countdown-container {
+        width: 100%;
+    }
+
+    main .main-body .countdown-container .countdown-el {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    footer #hills {
+        height: 20%;
+    }
+
+    footer .social  {
+        width: 150px;
+        margin: 0 auto 85px auto;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1800px) {
+    html, body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    main .main-body .countdown-container {
+        width: 100%;
+    }
+
+    main .main-body .countdown-container .countdown-el {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    footer #hills {
+        height: 20%;
+    }
+
+    footer .social  {
+        width: 150px;
+        margin: 0 auto 85px auto;
+    }
+}
