@@ -64,7 +64,7 @@ main #stars {
 }
 
 main .main-header {
-    background-color: var(--Verydarkblackblue);
+    background-color: var(--Verydarkblue);
     width: 100%;
     height: 40%;
     display: flex;
@@ -188,6 +188,18 @@ footer .social .fab:hover {
         font-size: 60px;
     }
 
+    main .main-body .countdown-container .countdown-el .big-text::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        top: 42.2%;
+        width: 100px;
+        height: 50px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        z-index: 0;
+    }
+
     footer #hills {
         height: 20%;
     }
@@ -224,6 +236,18 @@ footer .social .fab:hover {
         height: 80px;
         margin: 0 auto 10px auto;
         font-size: 40px;
+    }
+
+    main .main-body .countdown-container .countdown-el .big-text::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        top: 42.2%;
+        width: 80px;
+        height: 40px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        z-index: 0;
     }
 
     main .main-body .countdown-container .countdown-el span {
