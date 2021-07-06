@@ -1,4 +1,4 @@
-const countDownDate = new Date('6 July, 2021 00:00:00').getTime();
+const countDownDate = new Date('6 July, 2022 00:00:00').getTime();
 
 const x = setInterval(function () {
     const now = new Date().getTime();
