@@ -31,7 +31,6 @@ body {
     font-family: var(--font);
     font-weight: 700;
     font-size: 16px;
-    color: var(--White);
 }
 
 .attribution {
@@ -46,61 +45,6 @@ body {
     color: hsl(228, 45%, 44%);
 }
 
-main {
-    width: 100%;
-    height: 70%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
-
-main #stars {
-    background-color: transparent;
-    position: absolute;
-    z-index: 0;
-}
-
-main .main-header {
-    background-color: var(--Verydarkblue);
-    width: 100%;
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .main-body {
-    background-color: var(--Verydarkblue);
-    width: 100%;
-    height: 60%;
-}
-
-main .main-body .countdown-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    height: 100%;
-}
-
-main .main-body .countdown-container .countdown-el .big-text {
-    width: 200px;
-    height: 200px;
-    background-color: var(--Darkdesaturatedblue);
-    font-size: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--Softred);
-    margin: 0 0 10px 0;
-    border-radius: 10px;
-}
-
 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -110,268 +54,148 @@ main .main-body .countdown-container .countdown-el .big-text {
     user-select: none;
 }
 
-main .main-body .countdown-container .countdown-el .big-text::before {
-    content: '';
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.2);
-    top: 37.1%;
-    width: 200px;
-    height: 100px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    z-index: 0;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-main .main-body .countdown-container .countdown-el span {
-    font-size: 20px;
-    letter-spacing: 2px;
+span, .fab {
     color: var(--Grayishblue);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+    z-index: 1;
+    font-family: var(--font);
+    background-color: var(--Verydarkblue);
+    background-position: top;
+}
+
+main h1 {
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+main #stars {
+    background-color: transparent;
+    position: absolute;
+    z-index: 0;
+}
+
+.countdown {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5vh;
+    padding: 10px;
+}
+
+.countdown .countdown-el .big-text {
+    width: 60px;
+    height: 60px;
+    background-color: var(--Darkdesaturatedblue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--Softred);
+    margin: 0 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.countdown-el span {
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+
 footer {
     width: 100%;
-    height: 40%;
-    background-color: var(--Verydarkblue);
-    z-index: 1;
+    height: 20%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Verydarkblue);
+    position: relative;
 }
 
 footer #hills {
     position: absolute;
+    background-position: center;
+    background-size: 100%;
     width: 100%;
+    height: 100%;
+    left: 0;
     bottom: 0;
-    z-index: 0;
+    z-index: 1;
 }
 
 footer .social {
-    z-index: 1;
-    position: relative;
-    width: 10%;
-    height: 40%;
-    margin: auto;
+    width: 50%;
+    margin: 50px auto 0 auto;
+    height: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 }
 
-footer .social .fab {
-    text-align: center;
-    font-size: 30px;
+footer .fab {
+    font-size: 25px;
+    z-index: 5;
 }
 
 footer .social .fab:hover {
     cursor: pointer;
-    background-color: transparent;
     color: var(--Softred);
 }
 
-@media screen and (max-width: 500px) {
 
-    html,
-    body {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-
-    main .main-body .countdown-container {
-        width: 100%;
-    }
-
-    main .main-body .countdown-container .countdown-el .big-text {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto 10px auto;
-        font-size: 60px;
-    }
-
-    main .main-body .countdown-container .countdown-el .big-text::before {
-        content: '';
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.2);
-        top: 42.2%;
-        width: 100px;
-        height: 50px;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        z-index: 0;
-    }
-
-    footer #hills {
-        height: 20%;
-    }
-
-    footer .social {
-        width: 150px;
-        margin: 0 auto 85px auto;
+@media screen and (min-width: 375px) {
+    .countdown .countdown-el .big-text {
+        width: 75px;
+        height: 75px;
     }
 }
 
-@media screen and (max-width: 375px) {
-
-    html,
-    body {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
+@media screen and (min-width: 768px) {
+    .countdown .countdown-el .big-text {
+        width: 150px;
+        height: 150px;
+        font-size: 80px;
     }
 
-    main .main-body .countdown-container {
-        width: 100%;
-    }
-
-    main .main-body .countdown-container .countdown-el {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    main .main-body .countdown-container .countdown-el .big-text {
-        display: flex;
-        justify-content: space-evenly;
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 10px auto;
-        font-size: 40px;
-    }
-
-    main .main-body .countdown-container .countdown-el .big-text::before {
-        content: '';
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.2);
-        top: 42.2%;
-        width: 80px;
-        height: 40px;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        z-index: 0;
-    }
-
-    main .main-body .countdown-container .countdown-el span {
-        font-size: 15px;
+    .countdown-el span {
+        font-size: 18px;
     }
 
     footer .social {
-        width: 150px;
-        margin: 0 auto 75px auto;
+        width: 40%;
     }
 }
 
-@media screen and (min-width: 501px) and (max-width: 1000px) {
-
-    html,
-    body {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-
-    main .main-body .countdown-container {
-        width: 100%;
-    }
-
-    main .main-body .countdown-container .countdown-el {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    footer #hills {
-        height: 20%;
+@media screen and (min-width: 1440px) {
+    .countdown .countdown-el .big-text {
+        width: 200px;
+        height: 200px;
+        margin: 0 20px;
     }
 
     footer .social {
-        width: 150px;
-        margin: 0 auto 85px auto;
-    }
-}
-
-@media screen and (min-width: 1001px) and (max-width: 1200px) {
-
-    html,
-    body {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-
-    main .main-body .countdown-container {
-        width: 100%;
-    }
-
-    main .main-body .countdown-container .countdown-el {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    footer #hills {
-        height: 20%;
-    }
-
-    footer .social {
-        width: 150px;
-        margin: 0 auto 85px auto;
-    }
-}
-
-@media screen and (min-width: 1201px) and (max-width: 1399px) {
-
-    html,
-    body {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-
-    main .main-body .countdown-container {
-        width: 100%;
-    }
-
-    main .main-body .countdown-container .countdown-el {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    footer #hills {
-        height: 20%;
-    }
-
-    footer .social {
-        width: 150px;
-        margin: 0 auto 85px auto;
-    }
-}
-
-@media screen and (min-width: 1400px) and (max-width: 1800px) {
-
-    html,
-    body {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-
-    main .main-body .countdown-container {
-        width: 100%;
-    }
-
-    main .main-body .countdown-container .countdown-el {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    footer #hills {
-        height: 20%;
-    }
-
-    footer .social {
-        width: 150px;
-        margin: 0 auto 85px auto;
+        width: 20%;
     }
 }
