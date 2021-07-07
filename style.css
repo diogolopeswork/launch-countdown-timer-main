@@ -73,7 +73,6 @@ main {
     z-index: 1;
     font-family: var(--font);
     background-color: var(--Verydarkblue);
-    background-position: top;
 }
 
 main h1 {
@@ -197,5 +196,11 @@ footer .social .fab:hover {
 
     footer .social {
         width: 20%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    footer .social {
+        width: 15%;
     }
 }
